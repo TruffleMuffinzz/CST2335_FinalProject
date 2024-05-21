@@ -19,8 +19,7 @@ Required elements checklist
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        app:layout_constraintTop_toTopOf="parent"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 <!--    <ImageButton-->
 <!--        android:layout_width="wrap_content"-->
