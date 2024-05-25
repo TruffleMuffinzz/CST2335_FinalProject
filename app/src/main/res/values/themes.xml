@@ -7,5 +7,14 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="AppTheme.DatePicker" parent="ThemeOverlay.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/darkBG</item>
+        <item name="colorPrimaryVariant">@color/darkFG</item>
+        <item name="android:colorAccent">@color/darkTeal</item>
+        <item name="colorOnPrimary">@color/darkWhite</item>
+        <item name="android:textColorPrimary">@color/darkWhite</item>
+        <item name="android:textColorSecondary">@color/darkTeal</item>
+    </style>
+
     <style name="Theme.CST2335_FinalProject" parent="Base.Theme.CST2335_FinalProject" />
 </resources>

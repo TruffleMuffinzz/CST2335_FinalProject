@@ -12,13 +12,12 @@ Required elements checklist
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/darkBG">
 
-    <!-- This is the ToolBar for when there is no name entered -->
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <include
         android:id="@+id/toolbar"
+        layout="@layout/toolbar"
         app:layout_constraintTop_toTopOf="parent" />
 
 <!--    <ImageButton-->
@@ -32,7 +31,7 @@ Required elements checklist
     <EditText
         android:id="@+id/nameEditText"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:hint="@string/enterName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -40,9 +39,11 @@ Required elements checklist
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.381"
-        android:gravity="center_horizontal"
+        android:gravity="center"
         android:visibility="visible"
-        android:inputType="text" />
+        android:inputType="text"
+        android:background="@drawable/rounded_corner_dark_white"
+        android:textColor="@color/darkBG"/>
 
     <!-- Submit button to set the name of the user, only shows without a name -->
     <Button
@@ -53,7 +54,9 @@ Required elements checklist
         app:layout_constraintRight_toRightOf="parent"
         android:text="@string/submit"
         android:visibility="visible"
-        android:id="@+id/submitButton"/>
+        android:id="@+id/submitButton"
+        android:background="@drawable/rounded_corner_teal"
+        android:layout_marginTop="5dp" />
 
     <!-- The following will only show once the user enters their name, the name is saved with sharedprefs -->
     <TextView
@@ -66,8 +69,19 @@ Required elements checklist
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.381"
         android:text=""
-        android:textSize="18sp"
-        android:id="@+id/welcomeMessage"/>
+        android:textSize="22sp"
+        android:id="@+id/welcomeMessage"
+        android:textColor="@color/darkTeal"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/question_mark"
+        android:id="@+id/helpButton"
+        android:background="@android:color/transparent"
+        app:tint="@color/darkWhite"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,5 +3,14 @@
     <string name="enterName">Enter your name:</string>
     <string name="submit">Submit</string>
     <string name="welcomeMessage">Welcome, %s!</string>
-
+    <string name="helpNoName">Enter your name in the text box, then press submit to gain access.</string>
+    <string name="helpName">Touch the calendar in the top left to select a date, press the hamburger menu in the top right to see user options, a list of your saved images, and a slideshow.</string>
+    <string name="helpPositive">Got it!</string>
+    <string name="datePicker">Date Picker</string>
+    <string name="fetchImage">Fetch Image</string>
+    <string name="date">Date:</string>
+    <string name="calendar">Calendar</string>
+    <string name="navDrawer">Navigation drawer</string>
+    <string name="url">URL:</string>
+    <string name="hdurl">HDURL:</string>
 </resources>

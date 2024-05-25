@@ -3,4 +3,14 @@
     <string name="enterName">Entrez votre nom:</string>
     <string name="submit">Soumettre</string>
     <string name="welcomeMessage">Bienvenue, %s!</string>
+    <string name="helpNoName">Entrez votre nom dans la zone de texte, puis appuyez sur Soumettre pour y accéder.</string>
+    <string name="helpName">Touchez le calendrier en haut à gauche pour sélectionner une date, appuyez sur le menu hamburger en haut à droite pour voir les options utilisateur, une liste de vos images enregistrées et un diaporama.</string>
+    <string name="helpPositive">J\'ai compris!</string>
+    <string name="datePicker">Sélecteur de Date</string>
+    <string name="fetchImage">Récupérer l\'image</string>
+    <string name="date">La Date:</string>
+    <string name="calendar">Calendrier</string>
+    <string name="navDrawer">Tiroir de navigation</string>
+    <string name="url">URL:</string>
+    <string name="hdurl">HDURL:</string>
 </resources>

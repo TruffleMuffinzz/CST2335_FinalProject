@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageInfo"
+    android:background="@color/darkBG">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/backButton"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:tint="@color/darkWhite" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        android:id="@+id/dateLabel"
+        android:textColor="@color/darkWhite"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="22dp"
+        android:textSize="22sp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:background="@drawable/rounded_corner_dark_white"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toRightOf="@id/dateLabel"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        android:layout_marginTop="45dp"
+        android:id="@+id/dateText"
+        android:textColor="@color/darkBG"
+        android:gravity="center"
+        android:text="nullDATE" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/url"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateLabel"
+        android:id="@+id/UrlLabel"
+        android:textColor="@color/darkWhite"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="22dp"
+        android:textSize="22sp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/rounded_corner_dark_white"
+        app:layout_constraintLeft_toRightOf="@id/UrlLabel"
+        app:layout_constraintTop_toBottomOf="@id/dateText"
+        android:id="@+id/urlText"
+        android:textColor="@color/darkBG"
+        android:gravity="center"
+        android:text="nullURL" />
+
+
+    <TextView
+        android:id="@+id/hdUrlLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/hdurl"
+        android:textColor="@color/darkWhite"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/UrlLabel" />
+
+    <TextView
+        android:id="@+id/hdUrlText"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/rounded_corner_dark_white"
+        app:layout_constraintLeft_toRightOf="@id/hdUrlLabel"
+        app:layout_constraintTop_toBottomOf="@id/urlText"
+        android:textColor="@color/darkBG"
+        android:gravity="center"
+        android:text="nullHDURL"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

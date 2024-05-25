@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/datePickMenu"
+        android:icon="@drawable/white_calendar"
+        android:title="@string/datePicker"
+        app:showAsAction="always"
+        android:visible="false"/>
+    <item
+        android:id="@+id/navBarItem"
+        android:icon="@drawable/nav_drawer"
+        android:title="Navigation drawer"
+        app:showAsAction="always"
+        android:visible="false"/>
+</menu>
