@@ -4,7 +4,7 @@
     <string name="submit">Soumettre</string>
     <string name="welcomeMessage">Bienvenue, %s!</string>
     <string name="helpNoName">Entrez votre nom dans la zone de texte, puis appuyez sur Soumettre pour y accéder.</string>
-    <string name="helpName">Touchez le calendrier en haut à gauche pour sélectionner une date, appuyez sur le menu hamburger en haut à droite pour voir les options utilisateur, une liste de vos images enregistrées et un diaporama.</string>
+    <string name="helpName">Touchez le calendrier pour sélectionner une date, appuyez sur le menu hamburger pour plus d\'options.</string>
     <string name="helpPositive">J\'ai compris!</string>
     <string name="datePicker">Sélecteur de Date</string>
     <string name="fetchImage">Récupérer l\'image</string>
@@ -13,4 +13,16 @@
     <string name="navDrawer">Tiroir de navigation</string>
     <string name="url">URL:</string>
     <string name="hdurl">HDURL:</string>
+    <string name="saveImage">Enregistrer L\'Image HD</string>
+    <string name="helpDatePick">Sélectionnez une date, puis récupérez l\'image pour cette date.</string>
+    <string name="helpImageInfo">Cliquez sur HDUrl pour afficher l\'image, cliquez sur le bouton Enregistrer l\'image pour l\'enregistrer sur votre appareil. Utilisez la flèche de retour pour sélectionner une nouvelle date.</string>
+    <string name="home">Écran d\'accueil</string> <!-- This is the translation for home screen, because I don't think maison is correct in this situation, but I don't really know French -->
+    <string name="exit">Sortie</string>
+    <string name="drawerOpen">Ouvrir le tiroir de navigation</string>
+    <string name="drawerClose">Fermer le tiroir de navigation</string>
+    <string name="mainActivity">Activité principale</string>
+    <string name="fragmentHandlerActivity">Activité du gestionnaire de fragments</string>
+    <string name="listItems">Vos téléchargements</string>
+    <string name="listActivity">Liste des images enregistrées</string>
+    <string name="listItemHelp">Cliquez longuement sur un élément pour obtenir une option permettant de le supprimer.</string>
 </resources>

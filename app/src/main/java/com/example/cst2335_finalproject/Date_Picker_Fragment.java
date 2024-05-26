@@ -60,5 +60,10 @@ public class Date_Picker_Fragment extends Fragment {
 
     }
 
+    public void hideDatePickerFragment() {
+        if (getView() != null) {
+            getView().setVisibility(View.GONE);
+        }
+    }
 
 }

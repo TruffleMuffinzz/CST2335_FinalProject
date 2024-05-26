@@ -21,8 +21,12 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
@@ -35,6 +39,13 @@ import java.util.Objects;
 *       AlertDialog
 */
 
+/* GENERAL EXPLANATION
+*   The below code takes the user's name in the initial screen, as a simulation of a log in screen.
+*   When the user enters a name, the view is reset to display a welcome message including their name.
+*   Their name is saved in a SharedPreferences.
+*
+ */
+
 
 public class MainActivity extends AppCompatActivity {
     private EditText editTextName;
@@ -45,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
     private String savedName;
     private MenuItem dateItem;
     private MenuItem navItem;
+    private DrawerLayout drawerLayout;
+    private TextView activityNameNav;
 
 
     @Override
@@ -67,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
         submitBtn = findViewById(R.id.submitButton);
         welcomeText = findViewById(R.id.welcomeMessage);
         helpBtn = findViewById(R.id.helpButton);
+        drawerLayout = findViewById(R.id.drawerLayout);
+        NavigationView navigationView = findViewById(R.id.navView);
+        activityNameNav = navigationView.getHeaderView(0).findViewById(R.id.navActivityName);
+
+        activityNameNav.setText(R.string.mainActivity);
 
         sharedPrefs = getSharedPreferences("namePrefs", MODE_PRIVATE);
         savedName = sharedPrefs.getString("name", "");
@@ -110,7 +128,27 @@ public class MainActivity extends AppCompatActivity {
            }
         });
 
-
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.navHome) {
+                    drawerLayout.closeDrawer(GravityCompat.END);
+//                    Intent homeIntent = new Intent(MainActivity.this, MainActivity.class);
+//                    startActivity(homeIntent);
+                } else if (id == R.id.navDatePicker) {
+                    Intent datePickerIntent = new Intent(MainActivity.this, FragmentHandler.class);
+                    startActivity(datePickerIntent);
+                } else if (id == R.id.navList) {
+                    Intent savedImagesIntent = new Intent(MainActivity.this, SavedImagesList.class);
+                    startActivity(savedImagesIntent);
+                } else if (id == R.id.navExit) {
+                    finishAffinity();
+                }
+                drawerLayout.closeDrawer(GravityCompat.END);
+                return true;
+            }
+        });
 
     }
     private void saveName(String name) {
@@ -158,11 +196,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item){
+
         if (item.getItemId() == R.id.datePickMenu) {
             Intent intent = new Intent(this, FragmentHandler.class);
             startActivity(intent);
             return true;
+        } else if (item.getItemId() == R.id.navBarItem) {
+            if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                drawerLayout.closeDrawer(GravityCompat.END);
+            } else {
+                drawerLayout.openDrawer(GravityCompat.END);
+            }
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }

@@ -4,7 +4,7 @@
     <string name="submit">Submit</string>
     <string name="welcomeMessage">Welcome, %s!</string>
     <string name="helpNoName">Enter your name in the text box, then press submit to gain access.</string>
-    <string name="helpName">Touch the calendar in the top left to select a date, press the hamburger menu in the top right to see user options, a list of your saved images, and a slideshow.</string>
+    <string name="helpName">Touch the calendar to select a date, press the hamburger menu for more options.</string>
     <string name="helpPositive">Got it!</string>
     <string name="datePicker">Date Picker</string>
     <string name="fetchImage">Fetch Image</string>
@@ -13,4 +13,16 @@
     <string name="navDrawer">Navigation drawer</string>
     <string name="url">URL:</string>
     <string name="hdurl">HDURL:</string>
+    <string name="saveImage">Save HD Image</string>
+    <string name="helpDatePick">Select a date, then fetch the image for that date.</string>
+    <string name="helpImageInfo">Click the HDUrl to view the image, click the save image button to save it to your device. Use the back arrow to select a new date.</string>
+    <string name="home">Home</string>
+    <string name="exit">Exit</string>
+    <string name="drawerOpen">Open navigation drawer</string>
+    <string name="drawerClose">Close navigation drawer</string>
+    <string name="mainActivity">Main Activity</string>
+    <string name="fragmentHandlerActivity">Fragment Handler Activity</string>
+    <string name="listItems">Your downloads</string>
+    <string name="listActivity">Saved Images List</string>
+    <string name="listItemHelp">Long click on an item to get an option to delete it.</string>
 </resources>
